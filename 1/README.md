@@ -7,12 +7,19 @@ y responder a las siguientes cuestiones.
 1. En el fragmento de código de nuestro archivo (`test.js`) podemos encontrar
  hasta 3 variables. ¿Podrías decirnos cuál sería el valor de todas ellas al 
  finalizar la ejecución del script?
+    El objeto wb tendrá el mismo valor que al inicializarse.
+    En cambio, el valor de los objetos rgb y colors será la combinación de las propiedades iniciales de rgb y wb.
+
 2. Modifica el código para que las variables `rgb` y `wb` mantengan sus valores 
 iniciales y `colors` tenga los valores de ambas al finalizar la ejecución del 
 script.
+
+
 3. Además, tenemos un bug localizado en dispositivos con Internet Explorer… 
 El código de nuestro script no funciona y necesitamos que se ejecute también 
 en este navegador. ¿Sabrías identificar cuál es el problema? ¿Qué solución nos
  propones?
+    El problema está en que IE no soporta Object.assign.
+    La solución que yo emplearía sería la de hacer uso de alguna herramienta de compilación de JS como Babel.
 
 **PS**: No es estrictamente necesario tener Internet Explorer para poder identificar y/o resolver el bug. 

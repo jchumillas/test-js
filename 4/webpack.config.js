@@ -1,9 +1,10 @@
 module.exports = {
     mode: 'development',
-    entry: './src/app.js',
+    entry: ["babel-polyfill", "./src/app.js"],
     output: {
         filename: 'bundle.js'
     },
+    devtool: "source-map",
     module: {
         rules: [
             {
@@ -13,8 +14,7 @@ module.exports = {
                     loader: 'babel-loader',
                     options: {
                         presets: [
-                            '@babel/preset-env',
-                            '@babel/preset-es2015'
+                            '@babel/preset-env'
                         ],
                     }
                 }
